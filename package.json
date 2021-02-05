@@ -12,6 +12,9 @@
     "os:develop": "yarn run compile:watch",
     "all:develop": "yarn run compile:watch"
   },
+  "dependencies": {
+    "material-icons": "^0.5.3"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.13",
     "@babel/plugin-proposal-class-properties": "^7.12.13",
