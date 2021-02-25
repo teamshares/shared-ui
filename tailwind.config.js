@@ -156,5 +156,6 @@ module.exports = {
   },
   experimental: {
     applyComplexClasses: true
-  }
+  },
+  darkMode: "class"
 };
