@@ -26,22 +26,23 @@ module.exports = {
           900: "#2F3654"
         },
         gray: {
+          // white
+          100: "#FFFFFF",
           // lightest
-          50: "#FAFBFC",
+          200: "#F6F8FA",
           // lighter
-          100: "#F6F8FA",
-          // light
-          200: "#E8E8E8",
           300: "#E8E8E8",
+          // light
+          400: "#CDCFD1",
           // base
-          400: "#B3B5B8",
           500: "#B3B5B8",
           // dark
           600: "#93999E",
           // darker
           700: "#6D7176",
+          // darkest
+          800: "#444C59",
           // black
-          800: "#2E333C",
           900: "#2E333C"
         },
         red: {
@@ -99,6 +100,10 @@ module.exports = {
         mono: "SFMono-Regular, Menlo, mono",
         display: "DM Serif Display, Georgia, Times, serif",
         body: "Inter, Helvetica, Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+      },
+      fontSize: {
+        "10px": ["10px", "1.5em"],
+        "13px": ["13px", "1.5em"]
       },
       fontWeight: {
         light: 300,
