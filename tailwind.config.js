@@ -107,12 +107,17 @@ module.exports = {
         semibold: 600,
         bold: 700
       },
+      fontSize: {
+        "10px": ["10px", "1.5em"],
+        "13px": ["13px", "1.5em"] 
+      },
       height: {
         "680px": "680px"
       },
       spacing: {
         15: "3.75rem"
       },
+      // Not in Buyout
       transitionProperty: {
         height: "height",
       },
