@@ -101,6 +101,10 @@ module.exports = {
         display: "DM Serif Display, Georgia, Times, serif",
         body: "Inter, Helvetica, Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
       },
+      fontSize: {
+        "10px": ["0.625rem", "1.5em"],
+        "13px": ["0.8125rem", "1.5em"]
+      },
       fontWeight: {
         light: 300,
         normal: 400,
