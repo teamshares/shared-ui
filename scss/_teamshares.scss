@@ -906,7 +906,7 @@ button {
     padding-top: 5rem;
 
     section {
-      margin-top: 5rem;
+      padding-top: 5rem;
     }
   }
 }
@@ -994,6 +994,7 @@ button {
 
 
 .ts-drawer__section {
+  padding-top: 0;
 
   &.dir-down.open {
     .ts-drawer {
@@ -1034,8 +1035,8 @@ button {
     position: static;
     z-index: auto;
   }
+  
   .ts-header {
-    margin-top: 3rem;
     position: static;
     z-index: auto;
   }
