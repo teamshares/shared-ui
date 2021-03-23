@@ -266,7 +266,6 @@ button {
     background: transparent;
     border: 1px solid $gray-800;
     color: $gray-900;
-    line-height: 1.9375rem;
     svg { fill: $gray-900; }
 
     &:hover, &:active {
@@ -376,18 +375,32 @@ button {
   }
 }
 
+.ts-button-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 0;
+  min-width: 0;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .ts-button-sm {
   font-size: 0.8125rem;
+  line-height: 1.9375rem;
   padding: 0 0.75rem;
 }
 
 .ts-button-md {
   font-size: 0.8125rem;
+  line-height: 1.9375rem;
   padding: 0.15rem 1rem;
 }
 
 .ts-button-lg {
   font-size: 0.875rem;
+  line-height: 1.9375rem;
   padding: 0.15rem 2rem;
 }
 
