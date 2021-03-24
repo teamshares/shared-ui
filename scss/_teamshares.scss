@@ -420,7 +420,7 @@ button {
   color: $gray-900;
   font-size: 0.8125rem;
   height: 2.25rem;
-  line-height: 2.25rem;
+  line-height: 2rem;
   padding: 0 0.75rem;
   position: relative;
 
@@ -450,7 +450,6 @@ button {
   display: inline-block;
   font-size: 0.75rem;
   font-weight: $font-weight-medium;
-  margin-bottom: 0.175rem;
 }
 
 .ts-input__leading {
@@ -474,7 +473,7 @@ button {
       border-bottom-left-radius: 0.375rem;
       left: 1px;
       padding: 0 0.75rem;
-      top: 2.125rem;
+      top: 2rem;
     }
   }
 
@@ -523,7 +522,7 @@ button {
     background-color: $green-500;
     border-radius: 0.5rem;
     height: 0.5rem;
-    top: 3rem;
+    top: 2.75rem;
     width: 0.5rem;
   }
 
@@ -549,7 +548,7 @@ button {
 
     span {
       position: absolute;
-      top: 2.4375rem;
+      top: 2.25rem;
       left: 0.75rem;
 
       svg {
@@ -570,7 +569,7 @@ button {
       border-radius: 0.5rem;
       height: 0.5rem;
       position: absolute;
-      top: 3rem;
+      top: 2.75rem;
       left: 0.75rem;
       width: 0.5rem;
     }
