@@ -669,17 +669,14 @@ button {
     overflow-x: hidden;
     position: fixed;
     top: 1px; 
-    transition: width 2s, height 0.5s;
     width: 0;
-  }
-
-  &.push + main {
-    transition: width 2s, height 0.5s;
+    z-index: 9;
   }
 
   &.dir-down .ts-drawer {
     left: 0;
     right: 0;
+    //transition: height 2s;
     width: 100%;
   }
 
@@ -694,12 +691,14 @@ button {
 
     &.push + main {
       // margin-top: % or rem;
+      //transition: height 2s;
     }
   }
 
   &.dir-left .ts-drawer {
     height: 100%;
     right: 0;
+    //transition: width 2s;
   }
 
   &.dir-left.open {
@@ -709,12 +708,14 @@ button {
 
     &.push + main {
       // margin-right: rem;
+      //transition: width 2s;
     }
   }
 
   &.dir-right .ts-drawer {
     height: 100%;
     left: 0;
+    //transition: width 2s;
   }
 
   &.dir-right.open {
@@ -724,6 +725,7 @@ button {
 
     &.push + main {
       // margin-left: rem;
+      //transition: width 2s;
     }
   }
 }
@@ -756,7 +758,7 @@ button {
 
 .ts-drawer.bg-gray-200 {
   .ts-drawer__links a {
-    border-color: $gray-900;
+    border-color: $gray-600;
     color: $gray-900;
   }
 }
@@ -822,6 +824,8 @@ button {
 }
 
 .ts-header.bg-gray-200 {
+  border-color: $gray-600;
+
   .ts-header__logo {
     background-color: $gray-900;
     background-image: none;
@@ -850,7 +854,7 @@ button {
 
 .open .ts-header .ts-drawer__toggle {
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12' /%3E%3C/svg%3E");
-  margin-right: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 @media (min-width: 1024px) {
