@@ -405,6 +405,8 @@ button {
 .ts-button-lg {
   font-size: 0.875rem;
   line-height: 1.9375rem;
+  min-width: 10rem;
+  text-align: center;
   padding: 0.15rem 2rem;
 }
 
@@ -676,7 +678,6 @@ button {
   &.dir-down .ts-drawer {
     left: 0;
     right: 0;
-    //transition: height 2s;
     width: 100%;
   }
 
@@ -685,20 +686,12 @@ button {
       // height: % or rem;
       margin-top: 4rem;
     }
-
-    &.push .ts-drawer {
-    }
-
-    &.push + main {
-      // margin-top: % or rem;
-      //transition: height 2s;
-    }
   }
 
   &.dir-left .ts-drawer {
     height: 100%;
     right: 0;
-    //transition: width 2s;
+    transition: width 500ms;
   }
 
   &.dir-left.open {
@@ -706,16 +699,16 @@ button {
       // width: % or rem;
     }
 
-    &.push + main {
+    &.push + .push-content {
       // margin-right: rem;
-      //transition: width 2s;
+      transition: width 500ms;
     }
   }
 
   &.dir-right .ts-drawer {
     height: 100%;
     left: 0;
-    //transition: width 2s;
+    transition: width 500ms;
   }
 
   &.dir-right.open {
@@ -723,9 +716,9 @@ button {
       // width: % or rem;
     }
 
-    &.push + main {
+    &.push + .push-content {
       // margin-left: rem;
-      //transition: width 2s;
+      transition: width 500ms;
     }
   }
 }
