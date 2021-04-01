@@ -683,7 +683,7 @@ button {
 
   &.dir-down.open {
     .ts-drawer {
-      // height: % or rem;
+      height: auto;
       margin-top: 4rem;
     }
   }
