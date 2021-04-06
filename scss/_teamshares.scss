@@ -57,6 +57,7 @@ $blue-600: theme('colors.blue.600');
 $blue-700: theme('colors.blue.700');
 $blue-800: theme('colors.blue.800');
 $blue-900: theme('colors.blue.900');
+$blue-1000: theme('colors.blue.1000');
 
 // Passing AA combinations
 
@@ -109,6 +110,7 @@ $blue-900: theme('colors.blue.900');
 .bg-blue-700 { background-color: $blue-700; color: $gray-100; }
 .bg-blue-800 { background-color: $blue-800; color: $gray-100; }
 .bg-blue-900 { background-color: $blue-900; color: $gray-100; }
+.bg-blue-1000 { background-color: $blue-1000; color: $gray-100; }
 
 // Type
 
