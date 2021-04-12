@@ -13,7 +13,7 @@
     "all:develop": "yarn run compile:watch"
   },
   "dependencies": {
-    "material-icons": "^0.6.0"
+    "material-icons": "^0.6.1"
   },
   "devDependencies": {
     "@babel/core": "^7.13.15",
