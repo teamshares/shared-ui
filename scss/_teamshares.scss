@@ -869,6 +869,24 @@ button {
   }
 }
 
+// Tables
+
+.ts-table {
+  @apply absolute left-0 w-64;
+}
+
+.ts-table__header-col {
+  @apply flex items-center bg-gray-200 border-t border-r border-gray-300 h-10 overflow-y-hidden;
+  box-shadow: 3px 0 0 0 rgba(0, 0, 0, 0.05);
+}
+
+.ts-table__header-row  {
+  @apply flex items-center bg-gray-100 border-t border-r border-gray-300 h-14 overflow-y-hidden;
+  box-shadow: 3px 0 0 0 rgba(0, 0, 0, 0.05);
+
+  td { @apply flex flex-col; }
+}
+
 // Wrappers
 
 .ts-wrapper {
