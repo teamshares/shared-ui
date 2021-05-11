@@ -691,13 +691,17 @@ button {
 }
 
 .ts-drawer__header {
-  @apply border-b border-gray-300 fixed flex justify-between top-0;
+  @apply border-b border-gray-300 flex justify-between top-0;
   background-color: $gray-100;
   padding: 1.8rem;
 }
 
+.ts-drawer__section.open .ts-drawer__header {
+  //position: fixed;
+}
+
 .ts-drawer__header + div {
-  margin-top: 4.6rem;
+  //margin-top: 4.6rem;
 }
 
 .ts-drawer__label {
