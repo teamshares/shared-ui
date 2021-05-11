@@ -59,7 +59,7 @@ $blue-800: theme('colors.blue.800');
 $blue-900: theme('colors.blue.900');
 $blue-1000: theme('colors.blue.1000');
 
-// Passing AA combinations
+// Colors: AA passing combinations
 
 .bg-gray-100 { background-color: $gray-100; color: $gray-900; }
 .bg-gray-200 { background-color: $gray-200; color: $gray-900; }
@@ -112,7 +112,7 @@ $blue-1000: theme('colors.blue.1000');
 .bg-blue-900 { background-color: $blue-900; color: $gray-100; }
 .bg-blue-1000 { background-color: $blue-1000; color: $gray-100; }
 
-// Type
+// Fonts
 
 $base-font-size: 16px;
 $font-weight-light: 300;
@@ -126,6 +126,8 @@ $font-weight-bold: 700;
 .font-weight-medium { font-weight: $font-weight-medium; }
 .font-weight-semibold { font-weight: $font-weight-semibold; }
 .font-weight-bold { font-weight: $font-weight-bold; }
+
+// Core elements
 
 body {
   font-family: 'Inter', courier, Helvetica, Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -212,7 +214,7 @@ li a, ul a {
   text-decoration: underline;
 }
 
-// Buttons
+// Form elements
 
 button {
   appearance: none;
@@ -420,8 +422,6 @@ button {
   }
 }
 
-// Inputs
-
 .ts-input {
   border: 1px solid $gray-600;
   border-radius: 0.375rem;
@@ -625,52 +625,21 @@ button {
   }
 }
 
-// Hats
+// Dashboard components
 
-.ts-alert {
-  font-size: 0.8125rem;
-  font-weight: $font-weight-medium;
-  line-height: 2.5rem;
-  padding: 0 2rem;
-  text-align: left;
-
-  &-yellow {
-    background-color: $yellow-100;
-    border: 1px solid $yellow-400;
-    color: $yellow-700;
-
-    svg {
-      color: $yellow-700;
-    }
-  }
-
-  &-green {
-    background-color: $green-100;
-    border: 1px solid $green-400;
-    color: $green-700;
-
-    svg {
-      color: $green-700;
-    }
-  }
-
-  &-red {
-    background-color: $red-100;
-    border: 1px solid $red-400;
-    color: $red-700;
-
-    svg {
-      color: $red-700;
-    }
-  }
+.ts-card {
+  border: 1px solid $gray-300;
+  border-radius: 0.5rem;
+  min-width: 4rem;
+  overflow: hidden;
 }
 
-// Drawers
+// Drawer components
 
 .ts-drawer__section {
   .ts-drawer {
     background-color: $gray-100;
-    height: 100%;
+    height: 0;
     overflow-x: hidden;
     position: fixed;
     top: 0; 
@@ -679,24 +648,31 @@ button {
     z-index: 9;
   }
 
-  &.dir-down .ts-drawer {
-    height: 0;
-    left: 0;
-    right: 0;
-    transition: height 500ms;
-    width: 100%;
-  }
-
   &.dir-left .ts-drawer {
     border-left: 1px solid $gray-400;
     box-shadow: -8px 0 4px -2px rgba(0,0,0,0.1);
+    height: 100%;
     right: 0;
   }
 
   &.dir-right .ts-drawer {
     border-right: 1px solid $gray-400;
     box-shadow: 8px 0 4px -2px rgba(0,0,0,0.1);
+    height: 100%;
     left: 0;
+  }
+
+  &.dir-down .ts-drawer {
+    height: 0;
+    left: 0;
+    right: 0;
+    top: 4.6rem;
+    transition: height 500ms;
+    width: 100%;
+  }
+
+  &.dir-down.open .ts-drawer {
+    height: 100%;
   }
 }
 
@@ -758,6 +734,46 @@ button {
   .ts-drawer__links a {
     border-color: $gray-600;
     color: $gray-900;
+  }
+}
+
+// Notifications
+
+.ts-alert {
+  font-size: 0.8125rem;
+  font-weight: $font-weight-medium;
+  line-height: 2.5rem;
+  padding: 0 2rem;
+  text-align: left;
+
+  &-yellow {
+    background-color: $yellow-100;
+    border: 1px solid $yellow-400;
+    color: $yellow-700;
+
+    svg {
+      color: $yellow-700;
+    }
+  }
+
+  &-green {
+    background-color: $green-100;
+    border: 1px solid $green-400;
+    color: $green-700;
+
+    svg {
+      color: $green-700;
+    }
+  }
+
+  &-red {
+    background-color: $red-100;
+    border: 1px solid $red-400;
+    color: $red-700;
+
+    svg {
+      color: $red-700;
+    }
   }
 }
 
@@ -913,17 +929,4 @@ button {
   &.space-between {
     justify-content: space-between;
   }
-}
-
-// Cards 
-
-.ts-card {
-  border: 1px solid $gray-300;
-  border-radius: 0.5rem;
-  min-width: 4rem;
-  overflow: hidden;
-}
-
-.ts-card__swatch {
-  // height: % or rem;
 }
