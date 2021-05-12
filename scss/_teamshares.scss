@@ -439,7 +439,7 @@ button {
   &:focus,
   &:focus-within {
     border-color: $gray-900;
-    box-shadow: 0 0 0 3px $gray-300;
+    box-shadow: none;
     outline: 0;
 
     &::placeholder {
@@ -809,6 +809,29 @@ button {
     line-height: 1.875rem;
     margin-right: 2rem;
   }
+
+  .ts-input__select.icon {
+
+    .ts-input {
+      background-image: none;
+      border: none;
+      font-size: 0.875rem;
+      font-weight: $font-weight-medium;
+      line-height: 1.875rem;
+      height: auto;
+      padding: 0 0 0 1.5rem;
+      text-transform: capitalize;
+    }
+
+    span {
+      top: 0.05rem;
+      left: 0;
+
+      svg {
+        height: 1.2rem;
+      }
+    }
+  }
 }
 .ts-header__logo {
   align-self: center;
@@ -902,7 +925,7 @@ button {
 }
 
 .ts-table__header-label {
-  @apply font-medium px-4 text-gray-700 text-xs;
+  @apply px-4 text-gray-700 text-xs;
 }
 
 // Toggles
