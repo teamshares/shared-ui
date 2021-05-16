@@ -849,9 +849,7 @@ button {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  margin: 0 auto;
-  max-width: 1280px;
-  padding: 1.25rem 1.5rem;
+  padding: 1.5rem;
 }
 
 .ts-header.bg-gray-200 {
@@ -898,7 +896,8 @@ button {
   }
 
   .ts-header__nav {
-    padding: 1.25rem 3.75rem;
+    @apply mx-24;
+    padding: 1.25rem 0;
   }
 }
 
