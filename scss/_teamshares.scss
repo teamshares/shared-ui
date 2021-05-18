@@ -740,6 +740,16 @@ button {
   }
 }
 
+.ts-drawer__overlay {
+  @apply absolute hidden;
+  z-index: 8;
+  height: 80%;
+  width: 80%;
+}
+#help-drawer.open .ts-drawer__overlay {
+  @apply block
+}
+
 // Notifications
 
 .ts-alert {
