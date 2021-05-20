@@ -743,8 +743,8 @@ button {
 .ts-drawer__overlay {
   @apply absolute hidden;
   z-index: 8;
-  height: 80%;
-  width: 80%;
+  height: 100%;
+  width: 100%;
 }
 #help-drawer.open .ts-drawer__overlay {
   @apply block
