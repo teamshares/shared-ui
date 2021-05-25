@@ -55,6 +55,18 @@
 
   _defineProperty(_class, "targets", ["toggleable"]);
 
+  class input_clipboard_controller extends stimulus.Controller {
+    copy(event) {
+      const clipboardCopyEl = this.element;
+      clipboardCopyEl.classList.add("clicked");
+      setTimeout(() => {
+        clipboardCopyEl.classList.remove("clicked");
+      }, 5000);
+    }
+
+  }
+
+  exports.InputClipboardController = input_clipboard_controller;
   exports.ToggleController = _class;
 
   Object.defineProperty(exports, '__esModule', { value: true });
