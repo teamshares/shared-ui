@@ -8,9 +8,11 @@ export default class extends Controller {
   }
 
   copy (event) {
-    this.select();
-    document.execCommand("copy");
-    this.ctaTarget.textContent = "Copied!";
+    if (!this.data.has("allowDefault")) {
+      event.preventDefault();
+    }
+    // document.execCommand("copy");
+    this.ctaTarget.textContent = "Copied"
 
     setTimeout(() => {
       this.ctaTarget.textContent = "Copy";

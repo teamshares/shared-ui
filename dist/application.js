@@ -19,7 +19,7 @@
     return obj;
   }
 
-  class _class extends stimulus.Controller {
+  class _class$1 extends stimulus.Controller {
     connect() {
       this.element[this.identifier] = this;
       this.toggleClass = this.data.get("class") || "hidden";
@@ -53,9 +53,31 @@
 
   }
 
-  _defineProperty(_class, "targets", ["toggleable"]);
+  _defineProperty(_class$1, "targets", ["toggleable"]);
 
-  exports.ToggleController = _class;
+  class _class extends stimulus.Controller {
+    select(event) {
+      this.inputTarget.select();
+    }
+
+    copy(event) {
+      if (!this.data.has("allowDefault")) {
+        event.preventDefault();
+      } // document.execCommand("copy");
+
+
+      this.ctaTarget.textContent = "Copied";
+      setTimeout(() => {
+        this.ctaTarget.textContent = "Copy";
+      }, 5000);
+    }
+
+  }
+
+  _defineProperty(_class, "targets", ["input", "cta"]);
+
+  exports.InputClipboardController = _class;
+  exports.ToggleController = _class$1;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 

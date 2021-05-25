@@ -15,7 +15,7 @@ function _defineProperty(obj, key, value) {
   return obj;
 }
 
-class _class extends Controller {
+class _class$1 extends Controller {
   connect() {
     this.element[this.identifier] = this;
     this.toggleClass = this.data.get("class") || "hidden";
@@ -49,6 +49,27 @@ class _class extends Controller {
 
 }
 
-_defineProperty(_class, "targets", ["toggleable"]);
+_defineProperty(_class$1, "targets", ["toggleable"]);
 
-export { _class as ToggleController };
+class _class extends Controller {
+  select(event) {
+    this.inputTarget.select();
+  }
+
+  copy(event) {
+    if (!this.data.has("allowDefault")) {
+      event.preventDefault();
+    } // document.execCommand("copy");
+
+
+    this.ctaTarget.textContent = "Copied";
+    setTimeout(() => {
+      this.ctaTarget.textContent = "Copy";
+    }, 5000);
+  }
+
+}
+
+_defineProperty(_class, "targets", ["input", "cta"]);
+
+export { _class as InputClipboardController, _class$1 as ToggleController };
