@@ -216,7 +216,7 @@ li a, ul a {
 
 // Form elements
 // TODO: Refactor all ts-button-primary to ts-button primary and remove from this styling
-button, .ts-button, .ts-button-primary, .ts-button-secondary {
+button, .ts-button {
   appearance: none;
   border: 0;
   border-radius: 0.375rem;
@@ -228,8 +228,49 @@ button, .ts-button, .ts-button-primary, .ts-button-secondary {
   line-height: 2rem;
   min-width: 5rem;
   text-align: center;
+  padding: 0.15rem 1rem;
+  font-size: 0.8125rem;
 
-  &.primary, &-primary {
+  &.xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding: 0;
+    min-width: 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &.sm {
+    font-size: 0.8125rem;
+    line-height: 1.9375rem;
+    padding: 0 0.75rem;
+  }
+
+  &.md {
+    font-size: 0.8125rem;
+    line-height: 1.9375rem;
+    padding: 0.15rem 1rem;
+  }
+
+  &.lg {
+    font-size: 0.875rem;
+    line-height: 1.9375rem;
+    min-width: 10rem;
+    text-align: center;
+    padding: 0.15rem 2rem;
+  }
+
+  &.lg.icon {
+    padding-left: 2rem;
+
+    svg {
+      height: 1rem;
+    }
+  }
+
+  &.primary {
     background-color: $gray-900;
     color: $gray-100;
     transition: background-color 500ms;
@@ -271,7 +312,7 @@ button, .ts-button, .ts-button-primary, .ts-button-secondary {
     }
   }
 
-  &.secondary, &-secondary {
+  &.secondary {
     background: transparent;
     border: 1px solid $gray-800;
     color: $gray-900;
@@ -382,8 +423,8 @@ button, .ts-button, .ts-button-primary, .ts-button-secondary {
       vertical-align: text-top;
     }
   }
-
-  // TODO: Make sure all classes below are accounted for and refactor as needed to match button class above
+  
+  // TODO: Make sure all classes below are accounted for and refactor as needed to match button class above (for this ticket: https://www.notion.so/teamshares/Buyout-Button-Refactor-66c26432807440a4b2d351e4719e30cb)
   //.ts-button {
   //  &-primary {
   //    @apply bg-blue-700 text-white hover:text-white cursor-pointer flex font-medium inline-flex items-center leading-5 px-4 py-2 rounded-md text-center text-sm transition duration-150 ease-in-out;
@@ -391,9 +432,9 @@ button, .ts-button, .ts-button-primary, .ts-button-secondary {
   //  &-secondary {
   //    @apply bg-white border border-gray-300 text-gray-700 hover:text-gray-900 cursor-pointer flex font-medium inline-flex items-center leading-5 px-4 py-2 rounded-md text-center text-sm transition duration-150 ease-in-out;
   //  }
-  //&-blue {
-  //  @apply bg-blue-700 text-white hover:text-white
-  //}
+  //  &-blue {
+  //    @apply bg-blue-700 text-white hover:text-white
+  //  }
   //  &-google {
   //    background-color: #1a73e8;
   //    font-size: 14px;
@@ -415,46 +456,6 @@ button, .ts-button, .ts-button-primary, .ts-button-secondary {
   //    @apply bg-gray-200 cursor-not-allowed text-gray-600 flex font-medium inline-flex items-center leading-5 px-4 py-2 rounded-md text-center text-sm transition duration-150 ease-in-out;
   //  }
   //}
-}
-
-//TODO: Make sizing classes of button, styled above
-.ts-button-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-  padding: 0;
-  min-width: 0;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-.ts-button-sm {
-  font-size: 0.8125rem;
-  line-height: 1.9375rem;
-  padding: 0 0.75rem;
-}
-
-.ts-button-md {
-  font-size: 0.8125rem;
-  line-height: 1.9375rem;
-  padding: 0.15rem 1rem;
-}
-
-.ts-button-lg {
-  font-size: 0.875rem;
-  line-height: 1.9375rem;
-  min-width: 10rem;
-  text-align: center;
-  padding: 0.15rem 2rem;
-}
-
-.ts-button-lg.icon {
-  padding-left: 2rem;
-
-  svg {
-    height: 1rem;
-  }
 }
 
 .ts-input {
