@@ -3,7 +3,7 @@ html { scroll-behavior: smooth; }
 // Breakpoints
 
 $break-md: 768px; // @media (min-width: 768px) { }
-$break-lg: 1024px; // @media (min-width: 1024px) { } 
+$break-lg: 1024px; // @media (min-width: 1024px) { }
 $break-xl: 1280px; // @media (min-width: 1280px) { }
 
 // Colors
@@ -158,7 +158,7 @@ p {
   line-height: 1.5rem;
   margin-bottom: 1em;
 
-  &.xs { 
+  &.xs {
     font-size: 0.8125rem;
     line-height: 1.25rem;
   }
@@ -215,12 +215,13 @@ li a, ul a {
 }
 
 // Form elements
-
-button {
+// TODO: Refactor all ts-button-primary to ts-button primary and remove from this styling
+button, .ts-button, .ts-button-primary, .ts-button-secondary {
   appearance: none;
   border: 0;
   border-radius: 0.375rem;
   cursor: pointer;
+  display: inline-block;
   font-family: 'Inter', courier, Helvetica, Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: $font-weight-medium;
   letter-spacing: -0.01rem;
@@ -228,13 +229,13 @@ button {
   min-width: 5rem;
   text-align: center;
 
-  &.primary {
+  &.primary, &-primary {
     background-color: $gray-900;
     color: $gray-100;
     transition: background-color 500ms;
-    svg { fill: $gray-100; } 
+    svg { fill: $gray-100; }
 
-    &:hover, &:active { 
+    &:hover, &:active {
       background-color: $gray-800;
     }
 
@@ -270,7 +271,7 @@ button {
     }
   }
 
-  &.secondary {
+  &.secondary, &-secondary {
     background: transparent;
     border: 1px solid $gray-800;
     color: $gray-900;
@@ -381,8 +382,42 @@ button {
       vertical-align: text-top;
     }
   }
+
+  // TODO: Make sure all classes below are accounted for and refactor as needed to match button class above
+  //.ts-button {
+  //  &-primary {
+  //    @apply bg-blue-700 text-white hover:text-white cursor-pointer flex font-medium inline-flex items-center leading-5 px-4 py-2 rounded-md text-center text-sm transition duration-150 ease-in-out;
+  //  }
+  //  &-secondary {
+  //    @apply bg-white border border-gray-300 text-gray-700 hover:text-gray-900 cursor-pointer flex font-medium inline-flex items-center leading-5 px-4 py-2 rounded-md text-center text-sm transition duration-150 ease-in-out;
+  //  }
+  //&-blue {
+  //  @apply bg-blue-700 text-white hover:text-white
+  //}
+  //  &-google {
+  //    background-color: #1a73e8;
+  //    font-size: 14px;
+  //    line-height: 36px;
+  //    padding: 0 24px;
+  //    @apply mt-2 text-white cursor-pointer flex font-medium inline-flex items-center leading-5 px-4 py-2 rounded-md text-center text-sm transition duration-150 ease-in-out;
+  //
+  //    &:hover {
+  //      box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.5),
+  //      0 1px 3px 1px rgba(60, 64, 67, 0.3);
+  //    }
+  //  }
+  //  &-red {
+  //    @apply text-red-900 hover:bg-red-600 hover:text-white cursor-pointer flex font-medium inline-flex items-center leading-5 px-4 py-2 rounded-md text-center text-sm transition duration-150 ease-in-out;
+  //  }
+  //
+  //  &-disabled,
+  //  &:disabled {
+  //    @apply bg-gray-200 cursor-not-allowed text-gray-600 flex font-medium inline-flex items-center leading-5 px-4 py-2 rounded-md text-center text-sm transition duration-150 ease-in-out;
+  //  }
+  //}
 }
 
+//TODO: Make sizing classes of button, styled above
 .ts-button-xs {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -660,7 +695,7 @@ clipboard-copy {
     height: 0;
     overflow-x: hidden;
     position: fixed;
-    top: 0; 
+    top: 0;
     transition: width 400ms;
     width: 0;
     z-index: 9;
@@ -703,7 +738,7 @@ clipboard-copy {
   font-size: 0.875rem;
   line-height: 1.375rem;
 
-  span { 
+  span {
     @apply font-weight-semibold;
   }
 }
@@ -824,7 +859,7 @@ clipboard-copy {
 }
 
 .ts-header__links {
-  align-self: center;    
+  align-self: center;
   display: none;
   flex: 1 1 auto;
   overflow: hidden;
@@ -892,7 +927,7 @@ clipboard-copy {
 
 .ts-header.bg-blue-900 {
   border-color: $gray-100;
-  
+
   .ts-drawer__toggle {
     background: $gray-100;
   }
@@ -968,7 +1003,7 @@ clipboard-copy {
 }
 
 .ts-header .ts-drawer__toggle {
-  background-color: $gray-900; 
+  background-color: $gray-900;
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h16M4 16h16' /%3E%3C/svg%3E");
   content: '';
   cursor: pointer;
