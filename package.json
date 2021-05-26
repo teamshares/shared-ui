@@ -13,7 +13,9 @@
     "all:develop": "yarn run compile:watch"
   },
   "dependencies": {
-    "material-icons": "^0.6.4"
+    "@github/clipboard-copy-element": "^1.1.2",
+    "@webcomponents/custom-elements": "^1.4.3",
+    "material-icons": "^0.6.3"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",

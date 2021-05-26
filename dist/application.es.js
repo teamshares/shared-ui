@@ -51,4 +51,15 @@ class _class extends Controller {
 
 _defineProperty(_class, "targets", ["toggleable"]);
 
-export { _class as ToggleController };
+class input_clipboard_controller extends Controller {
+  copy(event) {
+    const clipboardCopyEl = this.element;
+    clipboardCopyEl.classList.add("clicked");
+    setTimeout(() => {
+      clipboardCopyEl.classList.remove("clicked");
+    }, 5000);
+  }
+
+}
+
+export { input_clipboard_controller as InputClipboardController, _class as ToggleController };
