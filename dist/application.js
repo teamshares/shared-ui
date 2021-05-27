@@ -35,6 +35,17 @@
       this.toggleExternalTargets();
     }
 
+    toggleOff(event) {
+      if (!this.data.has("allowDefault")) {
+        event.preventDefault();
+      }
+
+      if (this.element.classList.contains("open")) {
+        this.toggleControllerTargets();
+        this.toggleExternalTargets();
+      }
+    }
+
     toggleControllerTargets() {
       this.toggleableTargets.forEach(target => {
         this.toggleElementClassList(target);
