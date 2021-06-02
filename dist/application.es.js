@@ -1,4 +1,23 @@
 import { Controller } from 'stimulus';
+import Inputmask from 'inputmask';
+
+class input_clipboard_controller extends Controller {
+  copy(event) {
+    const clipboardCopyEl = this.element;
+    clipboardCopyEl.classList.add("clicked");
+    setTimeout(() => {
+      clipboardCopyEl.classList.remove("clicked");
+    }, 5000);
+  }
+
+}
+
+class input_mask_controller extends Controller {
+  connect() {
+    Inputmask(this.data.get("pattern")).mask(this.element);
+  }
+
+}
 
 function _defineProperty(obj, key, value) {
   if (key in obj) {
@@ -62,15 +81,4 @@ class _class extends Controller {
 
 _defineProperty(_class, "targets", ["toggleable"]);
 
-class input_clipboard_controller extends Controller {
-  copy(event) {
-    const clipboardCopyEl = this.element;
-    clipboardCopyEl.classList.add("clicked");
-    setTimeout(() => {
-      clipboardCopyEl.classList.remove("clicked");
-    }, 5000);
-  }
-
-}
-
-export { input_clipboard_controller as InputClipboardController, _class as ToggleController };
+export { input_clipboard_controller as InputClipboardController, input_mask_controller as InputMaskController, _class as ToggleController };

@@ -1,8 +1,30 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('stimulus')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'stimulus'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.TeamsharesUI = {}, global.Stimulus));
-}(this, (function (exports, stimulus) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('stimulus'), require('inputmask')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'stimulus', 'inputmask'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.TeamsharesUI = {}, global.Stimulus, global.Inputmask));
+}(this, (function (exports, stimulus, Inputmask) { 'use strict';
+
+  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+  var Inputmask__default = /*#__PURE__*/_interopDefaultLegacy(Inputmask);
+
+  class input_clipboard_controller extends stimulus.Controller {
+    copy(event) {
+      const clipboardCopyEl = this.element;
+      clipboardCopyEl.classList.add("clicked");
+      setTimeout(() => {
+        clipboardCopyEl.classList.remove("clicked");
+      }, 5000);
+    }
+
+  }
+
+  class input_mask_controller extends stimulus.Controller {
+    connect() {
+      Inputmask__default['default'](this.data.get("pattern")).mask(this.element);
+    }
+
+  }
 
   function _defineProperty(obj, key, value) {
     if (key in obj) {
@@ -66,18 +88,8 @@
 
   _defineProperty(_class, "targets", ["toggleable"]);
 
-  class input_clipboard_controller extends stimulus.Controller {
-    copy(event) {
-      const clipboardCopyEl = this.element;
-      clipboardCopyEl.classList.add("clicked");
-      setTimeout(() => {
-        clipboardCopyEl.classList.remove("clicked");
-      }, 5000);
-    }
-
-  }
-
   exports.InputClipboardController = input_clipboard_controller;
+  exports.InputMaskController = input_mask_controller;
   exports.ToggleController = _class;
 
   Object.defineProperty(exports, '__esModule', { value: true });
