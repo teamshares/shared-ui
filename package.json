@@ -15,13 +15,13 @@
   "dependencies": {
     "@github/clipboard-copy-element": "^1.1.2",
     "@webcomponents/custom-elements": "^1.4.3",
-    "material-icons": "^0.6.3"
+    "material-icons": "^0.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
     "@babel/plugin-proposal-class-properties": "^7.12.13",
     "@rollup/plugin-babel": "^5.2.3",
-    "rollup": "^2.48.0"
+    "rollup": "^2.50.6"
   },
   "peerDependencies": {
     "stimulus": "^2.0.0"
