@@ -1,12 +1,8 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('stimulus'), require('inputmask')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'stimulus', 'inputmask'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.TeamsharesUI = {}, global.Stimulus, global.Inputmask));
-}(this, (function (exports, stimulus, Inputmask) { 'use strict';
-
-  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
-
-  var Inputmask__default = /*#__PURE__*/_interopDefaultLegacy(Inputmask);
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('stimulus')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'stimulus'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.TeamsharesUI = {}, global.Stimulus));
+}(this, (function (exports, stimulus) { 'use strict';
 
   class input_clipboard_controller extends stimulus.Controller {
     copy(event) {
@@ -19,9 +15,11 @@
 
   }
 
+  const Inputmask = require("inputmask").default;
+
   class input_mask_controller extends stimulus.Controller {
     connect() {
-      Inputmask__default['default'](this.data.get("pattern")).mask(this.element);
+      Inputmask(this.data.get("pattern")).mask(this.element);
     }
 
   }

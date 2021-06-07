@@ -1,5 +1,4 @@
 import { Controller } from 'stimulus';
-import Inputmask from 'inputmask';
 
 class input_clipboard_controller extends Controller {
   copy(event) {
@@ -11,6 +10,8 @@ class input_clipboard_controller extends Controller {
   }
 
 }
+
+const Inputmask = require("inputmask").default;
 
 class input_mask_controller extends Controller {
   connect() {

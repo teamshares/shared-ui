@@ -15,10 +15,12 @@
   "dependencies": {
     "@github/clipboard-copy-element": "^1.1.2",
     "@webcomponents/custom-elements": "^1.4.3",
+    "inputmask": "^5.0.6",
     "material-icons": "^0.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
     "@babel/plugin-proposal-class-properties": "^7.12.13",
     "@rollup/plugin-babel": "^5.2.3",
     "rollup": "^2.50.6"

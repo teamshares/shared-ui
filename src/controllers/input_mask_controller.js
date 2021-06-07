@@ -1,5 +1,5 @@
 import { Controller } from "stimulus";
-import Inputmask from "inputmask";
+const Inputmask = require("inputmask").default;
 
 export default class extends Controller {
   connect () {
