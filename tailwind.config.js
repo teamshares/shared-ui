@@ -108,7 +108,7 @@ module.exports = {
   },
   variants: {
     extend: {
-      backgroundColor: ["active"],
+      backgroundColor: ["active", "odd"],
       borderColor: ["active"],
       borderStyle: ["group-hover", "hover", "focus", "active"],
       fill: ["hover", "focus"],
