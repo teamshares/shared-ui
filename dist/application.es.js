@@ -35,7 +35,7 @@ function _defineProperty(obj, key, value) {
   return obj;
 }
 
-class _class extends Controller {
+class _class$1 extends Controller {
   connect() {
     this.element[this.identifier] = this;
     this.toggleClass = this.data.get("class") || "hidden";
@@ -80,6 +80,42 @@ class _class extends Controller {
 
 }
 
-_defineProperty(_class, "targets", ["toggleable"]);
+_defineProperty(_class$1, "targets", ["toggleable"]);
 
-export { input_clipboard_controller as InputClipboardController, input_mask_controller as InputMaskController, _class as ToggleController };
+class _class extends Controller {
+  // for now, hard-coded to work with /for-leaders page.
+  // future PR will remove hard-coded classes and add value for customizable active and inactive classes.
+  connect() {
+    this.element[this.identifier] = this;
+  }
+
+  switch(event) {
+    if (!this.data.has("allowDefault")) {
+      event.preventDefault();
+    }
+
+    this.deactivate();
+    this.activate(event.target);
+  }
+
+  deactivate() {
+    this.switchableTargets.forEach(target => {
+      target.classList.add("hidden");
+    });
+    this.clickableTargets.forEach(target => {
+      target.classList.remove("text-gray-100", "border-gray-100");
+      target.classList.add("border-gray-900");
+    });
+  }
+
+  activate(currentElement) {
+    currentElement.classList.remove("border-gray-900");
+    currentElement.classList.add("text-gray-100", "border-gray-100");
+    document.querySelector(`.${currentElement.id}`).classList.remove("hidden");
+  }
+
+}
+
+_defineProperty(_class, "targets", ["switchable", "clickable"]);
+
+export { input_clipboard_controller as InputClipboardController, input_mask_controller as InputMaskController, _class as SwitchController, _class$1 as ToggleController };

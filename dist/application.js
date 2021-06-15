@@ -39,7 +39,7 @@
     return obj;
   }
 
-  class _class extends stimulus.Controller {
+  class _class$1 extends stimulus.Controller {
     connect() {
       this.element[this.identifier] = this;
       this.toggleClass = this.data.get("class") || "hidden";
@@ -84,11 +84,48 @@
 
   }
 
-  _defineProperty(_class, "targets", ["toggleable"]);
+  _defineProperty(_class$1, "targets", ["toggleable"]);
+
+  class _class extends stimulus.Controller {
+    // for now, hard-coded to work with /for-leaders page.
+    // future PR will remove hard-coded classes and add value for customizable active and inactive classes.
+    connect() {
+      this.element[this.identifier] = this;
+    }
+
+    switch(event) {
+      if (!this.data.has("allowDefault")) {
+        event.preventDefault();
+      }
+
+      this.deactivate();
+      this.activate(event.target);
+    }
+
+    deactivate() {
+      this.switchableTargets.forEach(target => {
+        target.classList.add("hidden");
+      });
+      this.clickableTargets.forEach(target => {
+        target.classList.remove("text-gray-100", "border-gray-100");
+        target.classList.add("border-gray-900");
+      });
+    }
+
+    activate(currentElement) {
+      currentElement.classList.remove("border-gray-900");
+      currentElement.classList.add("text-gray-100", "border-gray-100");
+      document.querySelector(`.${currentElement.id}`).classList.remove("hidden");
+    }
+
+  }
+
+  _defineProperty(_class, "targets", ["switchable", "clickable"]);
 
   exports.InputClipboardController = input_clipboard_controller;
   exports.InputMaskController = input_mask_controller;
-  exports.ToggleController = _class;
+  exports.SwitchController = _class;
+  exports.ToggleController = _class$1;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
