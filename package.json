@@ -5,6 +5,7 @@
   "main": "dist/application.js",
   "module": "dist/application.es.js",
   "scripts": {
+    "precommit": "lint-staged --quiet",
     "test": "echo \"Error: run tests from root\" && exit 1",
     "compile": "rollup -c",
     "compile:watch": "rollup -c -w",
@@ -25,7 +26,9 @@
     "@babel/plugin-proposal-class-properties": "^7.14.5",
     "@rollup/plugin-babel": "^5.2.3",
     "@rollup/plugin-node-resolve": "^13.0.0",
-    "rollup": "^2.52.7"
+    "rollup": "^2.52.7",
+    "stylelint": "^13.13.1",
+    "stylelint-config-sass-guidelines": "^8.0.0"
   },
   "peerDependencies": {
     "stimulus": "^2.0.0"
