@@ -16,7 +16,9 @@
     "@github/clipboard-copy-element": "^1.1.2",
     "@webcomponents/custom-elements": "^1.4.3",
     "inputmask": "^5.0.6",
-    "material-icons": "^0.7.6"
+    "intl-tel-input": "^17.0.13",
+    "material-icons": "^0.7.6",
+    "pretty-checkbox": "^3.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
