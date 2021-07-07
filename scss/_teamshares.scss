@@ -1031,3 +1031,31 @@ clipboard-copy {
     justify-content: space-between;
   }
 }
+
+// Custom styling for safari date select
+.safari-date-select {
+  .day, .month, .year {
+    border: none;
+    color: $gray-900;
+    font-size: 0.8125rem;
+    height: 2.25rem;
+    line-height: 2rem;
+    padding: 0 0 0 0.4rem;
+    position: relative;
+
+    &::placeholder {
+      color: $gray-600;
+    }
+
+    &:focus,
+    &:focus-within {
+      border-color: $gray-900;
+      box-shadow: none;
+      outline: 0;
+
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+}
