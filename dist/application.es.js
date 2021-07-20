@@ -111,7 +111,9 @@ class _class extends Controller {
   activate(currentElement) {
     currentElement.classList.remove("border-gray-900");
     currentElement.classList.add("text-gray-100", "border-gray-100");
-    document.querySelector(`.${currentElement.id}`).classList.remove("hidden");
+    document.querySelectorAll(`.${currentElement.id}`).forEach(element => {
+      element.classList.remove("hidden");
+    });
   }
 
 }
