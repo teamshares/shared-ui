@@ -24,6 +24,7 @@ module.exports = {
         gray: {
           100: "#ffffff",
           200: "#f6f8fa",
+          250: "#f0f0f0",
           300: "#e8e8e8",
           400: "#cdcfd1",
           500: "#b3b5b8",
@@ -87,7 +88,10 @@ module.exports = {
       height: {
         "680px": "680px"
       },
-      spacing: {
+      margin: {
+        "54px": "54px"
+      },
+       spacing: {
         15: "3.75rem"
       },
       // Not in Buyout
