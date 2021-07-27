@@ -65,6 +65,9 @@ module.exports = {
           700: "#cf8b23",
           800: "#956419",
           900: "#694712"
+        },
+        brightyellow: {
+          100: "#ffffe6"
         }
       },
       fontFamily: {
@@ -86,7 +89,8 @@ module.exports = {
         bold: 700
       },
       height: {
-        "680px": "680px"
+        "680px": "680px",
+        "38": "38rem"
       },
       margin: {
         "54px": "54px"
