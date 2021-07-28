@@ -18,7 +18,7 @@
     "@webcomponents/custom-elements": "^1.4.3",
     "inputmask": "^5.0.6",
     "intl-tel-input": "^17.0.13",
-    "material-icons": "^1.0.0",
+    "material-icons": "^1.0.1",
     "pretty-checkbox": "^3.0.3"
   },
   "devDependencies": {
