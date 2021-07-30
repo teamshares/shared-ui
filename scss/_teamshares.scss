@@ -731,6 +731,18 @@ button,
       color: transparent;
     }
   }
+
+  &:disabled {
+    background-color: $gray-200;
+    border-color: $gray-300;
+    color: $gray-600;
+
+    &:hover,
+    &:active {
+      background-color: $gray-200;
+      color: $gray-600;
+    }
+  }
 }
 
 .ts-input__help {
