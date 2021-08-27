@@ -38,28 +38,24 @@ function _defineProperty(obj, key, value) {
 class _class$1 extends Controller {
   connect() {
     this.element[this.identifier] = this;
-    this.toggleClass = this.data.get("class") || "hidden";
+    this.classToToggle = this.hasToggleClass ? this.toggleClass : "hidden";
     this.externalTargets = document.getElementsByClassName(this.data.get("externalTargetClass"));
   }
 
-  toggle(event) {
-    if (!this.data.has("allowDefault")) {
-      event.preventDefault();
-    }
+  classIsApplied() {
+    return this.element.classList.contains(this.classToToggle);
+  }
 
+  toggle(event) {
+    if (!this.data.has("allowDefault")) event.preventDefault();
     this.toggleControllerTargets();
     this.toggleExternalTargets();
+    this.optionallyToggleOthers();
   }
 
   toggleOff(event) {
-    if (!this.data.has("allowDefault")) {
-      event.preventDefault();
-    }
-
-    if (this.element.classList.contains("open")) {
-      this.toggleControllerTargets();
-      this.toggleExternalTargets();
-    }
+    if (!this.data.has("allowDefault")) event.preventDefault();
+    if (this.classIsApplied()) this.toggle(event);
   }
 
   toggleControllerTargets() {
@@ -75,12 +71,21 @@ class _class$1 extends Controller {
   }
 
   toggleElementClassList(targetElement) {
-    targetElement.classList.toggle(this.toggleClass);
+    targetElement.classList.toggle(this.classToToggle);
+  }
+
+  optionallyToggleOthers() {
+    if (!this.hasCloseOthersClass) return;
+    document.querySelectorAll(`.${this.closeOthersClass}:not(.${this.classToToggle})`).forEach(element => {
+      if (!this.element.contains(element)) this.toggleElementClassList(element);
+    });
   }
 
 }
 
 _defineProperty(_class$1, "targets", ["toggleable"]);
+
+_defineProperty(_class$1, "classes", ["toggle", "closeOthers"]);
 
 class _class extends Controller {
   // for now, hard-coded to work with /for-leaders page.

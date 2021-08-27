@@ -2,31 +2,30 @@ import { Controller } from "stimulus";
 
 export default class extends Controller {
   static targets = ["toggleable"];
+  static classes = ["toggle", "closeOthers"];
 
   connect () {
     this.element[this.identifier] = this;
-    this.toggleClass = this.data.get("class") || "hidden";
+    this.classToToggle = this.hasToggleClass ? this.toggleClass : "hidden";
     this.externalTargets = document.getElementsByClassName(this.data.get("externalTargetClass"));
   }
 
+  classIsApplied () {
+    return this.element.classList.contains(this.classToToggle);
+  }
+
   toggle (event) {
-    if (!this.data.has("allowDefault")) {
-      event.preventDefault();
-    }
+    if (!this.data.has("allowDefault")) event.preventDefault();
 
     this.toggleControllerTargets();
     this.toggleExternalTargets();
+    this.optionallyToggleOthers();
   }
 
-  toggleOff(event) {
-    if (!this.data.has("allowDefault")) {
-      event.preventDefault();
-    }
+  toggleOff (event) {
+    if (!this.data.has("allowDefault")) event.preventDefault();
 
-    if (this.element.classList.contains("open")) {
-      this.toggleControllerTargets();
-      this.toggleExternalTargets();
-    }
+    if (this.classIsApplied()) this.toggle(event);
   }
 
   toggleControllerTargets () {
@@ -42,6 +41,14 @@ export default class extends Controller {
   };
 
   toggleElementClassList(targetElement) {
-    targetElement.classList.toggle(this.toggleClass);
+    targetElement.classList.toggle(this.classToToggle);
+  }
+
+  optionallyToggleOthers () {
+    if (!this.hasCloseOthersClass) return;
+
+    document.querySelectorAll(`.${this.closeOthersClass}:not(.${this.classToToggle})`).forEach(element => {
+      if (!this.element.contains(element)) this.toggleElementClassList(element);
+    })
   }
 }
