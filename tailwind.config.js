@@ -68,7 +68,11 @@ module.exports = {
         },
         brightyellow: {
           100: "#ffffe6"
-        }
+        },
+        subdued: "#6d7176",
+        white: "#ffffff",
+        success: "#068466",
+        error: "#d7351c"
       },
       fontFamily: {
         sans: "Inter, Helvetica, Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",

@@ -2,7 +2,7 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('stimulus')) :
   typeof define === 'function' && define.amd ? define(['exports', 'stimulus'], factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.TeamsharesUI = {}, global.Stimulus));
-}(this, (function (exports, stimulus) { 'use strict';
+})(this, (function (exports, stimulus) { 'use strict';
 
   class input_clipboard_controller extends stimulus.Controller {
     copy(event) {
@@ -136,4 +136,4 @@
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
-})));
+}));

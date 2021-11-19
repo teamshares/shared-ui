@@ -1,0 +1,42 @@
+@layer components {
+  .ts-heading-1 {
+    @apply text-7xl font-bold leading-none tracking-tight;
+  }
+  .ts-heading-2 {
+    @apply text-6xl font-bold leading-none tracking-tight;
+  }
+  .ts-heading-3 {
+    @apply text-5xl font-bold leading-none tracking-tight;
+  }
+  .ts-heading-4 {
+    @apply text-4xl font-semibold leading-none tracking-tight;
+  }
+  .ts-heading-5 {
+    @apply text-2xl font-semibold leading-none tracking-tight;
+  }
+  .ts-heading-6 {
+    @apply text-lg font-semibold leading-none tracking-tight;
+  }
+  .ts-heading-7 {
+    @apply text-sm font-semibold leading-tight tracking-tight;
+  }
+  .ts-heading-8 {
+    @apply text-xs font-semibold leading-tight tracking-tight;
+  }
+
+  .ts-subheading {
+    @apply text-xs font-semibold leading-tight tracking-tight uppercase;
+  }
+
+  .ts-body-1 {
+    @apply font-sans font-normal text-base tracking-tight leading-6;
+  }
+
+  .ts-body-2 {
+    @apply text-sm font-normal leading-5 tracking-normal;
+  }
+
+  .ts-body-3 {
+    @apply text-xs font-normal leading-4 tracking-normal;
+  }
+}
