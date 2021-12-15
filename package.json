@@ -23,7 +23,7 @@
     "@babel/core": "^7.16.5",
     "@babel/plugin-proposal-class-properties": "^7.16.5",
     "@rollup/plugin-babel": "^5.2.3",
-    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-node-resolve": "^13.1.1",
     "rollup": "^2.61.1",
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^8.0.0"
