@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",
-    "@babel/plugin-proposal-class-properties": "^7.16.5",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@rollup/plugin-babel": "^5.2.3",
     "@rollup/plugin-node-resolve": "^13.1.2",
     "rollup": "^2.63.0",
