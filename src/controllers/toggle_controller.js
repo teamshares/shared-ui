@@ -2,7 +2,7 @@ import { Controller } from "stimulus";
 
 export default class extends Controller {
   static targets = ["toggleable"];
-  static classes = ["toggle", "closeOthers"];
+  static classes = ["toggle"];
 
   connect () {
     this.element[this.identifier] = this;
@@ -19,7 +19,6 @@ export default class extends Controller {
 
     this.toggleControllerTargets();
     this.toggleExternalTargets();
-    this.optionallyToggleOthers();
   }
 
   toggleOff (event) {
@@ -42,13 +41,5 @@ export default class extends Controller {
 
   toggleElementClassList(targetElement) {
     targetElement.classList.toggle(this.classToToggle);
-  }
-
-  optionallyToggleOthers () {
-    if (!this.hasCloseOthersClass) return;
-
-    document.querySelectorAll(`.${this.closeOthersClass}:not(.${this.classToToggle})`).forEach(element => {
-      if (!this.element.contains(element)) this.toggleElementClassList(element);
-    })
   }
 }
