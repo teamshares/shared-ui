@@ -22,9 +22,8 @@ module.exports = {
           1000: "#2f3654"
         },
         gray: {
-          100: "#ffffff",
-          200: "#f6f8fa",
-          250: "#f0f0f0",
+          100: "#f6f8fa",
+          200: "#f0f0f0",
           300: "#e8e8e8",
           400: "#cdcfd1",
           500: "#b3b5b8",
@@ -65,9 +64,6 @@ module.exports = {
           700: "#cf8b23",
           800: "#956419",
           900: "#694712"
-        },
-        brightyellow: {
-          100: "#ffffe6"
         },
         subdued: "#6d7176",
         white: "#ffffff",
