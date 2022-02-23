@@ -66,6 +66,7 @@ module.exports = {
           900: "#694712"
         },
         subdued: "#6d7176",
+        default: "#2e333c",
         white: "#ffffff",
         success: "#068466",
         error: "#d7351c"
