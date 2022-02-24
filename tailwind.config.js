@@ -6,6 +6,13 @@
  */
 
 module.exports = {
+  content: [
+    './app/views/**/*',
+    './app/helpers/**/*.rb',
+    './app/javascript/**/*.js',
+    './app/components/**/*',
+    './public/*.html'
+  ],
   theme: {
     extend: {
       colors: {
