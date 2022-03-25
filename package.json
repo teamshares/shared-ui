@@ -7,6 +7,7 @@
   "files": [
     "dist/*.js",
     "tailwind.config.js",
+    "images/*",
     "scss/*.scss"
   ],
   "scripts": {
