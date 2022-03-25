@@ -1,7 +1,7 @@
 /*
  * To load new changes in this file,
  * the Webpack server needs to be restarted.
- * TODO: Support webpack-dev-server livereload
+ * TODO: Support webpack-dev-server livereload (or the equivalent in Rails 7+)
  *
  */
 

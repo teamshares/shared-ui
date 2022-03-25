@@ -4,6 +4,11 @@
   "private": true,
   "main": "dist/application.js",
   "module": "dist/application.es.js",
+  "files": [
+    "dist/*.js",
+    "tailwind.config.js",
+    "scss/*.scss"
+  ],
   "scripts": {
     "precommit": "lint-staged --quiet",
     "test": "echo \"Error: run tests from root\" && exit 1",
@@ -17,7 +22,12 @@
     "@github/clipboard-copy-element": "^1.1.2",
     "@webcomponents/custom-elements": "^1.5.0",
     "inputmask": "^5.0.7",
-    "material-icons": "^1.10.8"
+    "material-icons": "^1.10.8",
+    "stimulus": "^2.0.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/typography": "^0.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",
@@ -27,8 +37,5 @@
     "rollup": "^2.70.1",
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^8.0.0"
-  },
-  "peerDependencies": {
-    "stimulus": "^2.0.0"
   }
 }
