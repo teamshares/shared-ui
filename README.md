@@ -28,7 +28,7 @@ Once the steps from above have been completed, to actually make changes you'll w
 
 1. **In this directory**: Start the compilation script with `yarn compile:watch` (only needed for JS changes)
 
-2. Now make a change in this repo and it should show up immediately on the next page refresh from the consuming app (e.g. OS).
+2. Now make a change in this repo and it should show up "immediately" (after compilation completes) in the consuming app (e.g. OS).
 
 #### Details
 
@@ -47,4 +47,4 @@ When you're done doing local development you _can_ undo this config:
 
 0. From _within this directory_: `yarn unlink`
 
-1. From _within the linked Rails app_: `yarn unlink @teamshares/ui` and then `yarn install --force` to re-installed the previously-linked package from remote instead
+1. From _within the linked Rails app_: `yarn unlink @teamshares/ui` and then `yarn install --force` to re-installed the previously-linked package from remote instead.
