@@ -54,7 +54,6 @@
       if (!this.data.has("allowDefault")) event.preventDefault();
       this.toggleControllerTargets();
       this.toggleExternalTargets();
-      this.optionallyToggleOthers();
     }
 
     toggleOff(event) {
@@ -78,18 +77,11 @@
       targetElement.classList.toggle(this.classToToggle);
     }
 
-    optionallyToggleOthers() {
-      if (!this.hasCloseOthersClass) return;
-      document.querySelectorAll(`.${this.closeOthersClass}:not(.${this.classToToggle})`).forEach(element => {
-        if (!this.element.contains(element)) this.toggleElementClassList(element);
-      });
-    }
-
   }
 
   _defineProperty(_class$1, "targets", ["toggleable"]);
 
-  _defineProperty(_class$1, "classes", ["toggle", "closeOthers"]);
+  _defineProperty(_class$1, "classes", ["toggle"]);
 
   class _class extends stimulus.Controller {
     // for now, hard-coded to work with /for-leaders page.
