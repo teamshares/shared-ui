@@ -2,9 +2,9 @@
 
 JavaScript package to share frontend UI components, styles, and configuration.
 
-## _Setting up_ [Local Development](https://classic.yarnpkg.com/en/docs/cli/link)
+## Local Development _Setup_
 
-Instructions on testing changes to this shared package _within another full Rails app in development_ (e.g. to have OS read your _local_ TeamsharesUI, without having to deploy all changes first).
+Instructions on testing changes to this shared package _within another full Rails app in development_ (e.g. to have OS read your _local_ TeamsharesUI, without having to deploy all changes first). If you'd rather see it visually, I've walked through the steps [in this Loom video](https://www.loom.com/share/856ecb06ed1945eab4d19cf7a6ec12b8).
 
 0. Check this repo out _as a sibling of the primary Rails apps_ (e.g. I use `~/code`): `git clone git@github.com:teamshares/shared-ui.git teamshares-ui` (and then run `yarn` once to install dependencies)
 
