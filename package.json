@@ -21,14 +21,14 @@
   },
   "dependencies": {
     "@github/clipboard-copy-element": "^1.1.2",
+    "@hotwired/stimulus": "^3.0.1",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/typography": "^0.4.1",
     "@webcomponents/custom-elements": "^1.5.0",
     "inputmask": "^5.0.7",
     "material-icons": "^1.10.8",
-    "stimulus": "^2.0.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "@tailwindcss/aspect-ratio": "^0.4.0",
-    "@tailwindcss/forms": "^0.2.1",
-    "@tailwindcss/typography": "^0.4.1"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",

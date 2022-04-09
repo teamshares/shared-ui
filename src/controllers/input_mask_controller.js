@@ -1,4 +1,4 @@
-import { Controller } from "stimulus";
+import { Controller } from "@hotwired/stimulus";
 const Inputmask = require("inputmask").default;
 
 export default class extends Controller {
