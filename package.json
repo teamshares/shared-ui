@@ -11,14 +11,10 @@
     "scss/*.scss"
   ],
   "scripts": {
-    "precommit": "lint-staged --quiet",
-    "test": "echo \"Error: run tests from root\" && exit 1",
     "compile": "rollup -c",
     "compile:watch": "rollup -c -w",
-    "buyout:develop": "yarn run compile:watch",
-    "os:develop": "yarn run compile:watch",
-    "all:develop": "yarn run compile:watch",
-    "prepare": "husky install"
+    "precommit": "lint-staged --quiet",
+    "prepare": "is-ci || husky install"
   },
   "dependencies": {
     "@github/clipboard-copy-element": "^1.1.2",
