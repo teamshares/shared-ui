@@ -4,4 +4,7 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+      day: "wednesday"
+      time: "07:00"
+      timezone: "America/New_York"
     versioning-strategy: increase
