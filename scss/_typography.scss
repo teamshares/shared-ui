@@ -50,4 +50,28 @@
   .ts-body-3 {
     @apply text-xs font-normal leading-4 tracking-normal;
   }
+
+  .ts-text-default {
+    @apply text-gray-900;
+  }
+
+  .ts-text-subdued {
+    @apply text-gray-700;
+  }
+
+  .ts-text-light {
+    @apply text-white;
+  }
+
+  .ts-text-light-subdued {
+    @apply text-gray-200;
+  }
+
+  .ts-text-success {
+    @apply text-green-700;
+  }
+
+  .ts-text-error {
+    @apply text-red-700;
+  }
 }
