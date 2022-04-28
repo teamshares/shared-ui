@@ -64,6 +64,13 @@ $blue-800: theme('colors.blue.800');
 $blue-900: theme('colors.blue.900');
 $blue-1000: theme('colors.blue.1000');
 
+.icons-preview {
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
 // Colors: AA passing combinations
 
 .bg-gray-100 {
