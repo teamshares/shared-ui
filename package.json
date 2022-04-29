@@ -11,13 +11,10 @@
     "scss/*.scss"
   ],
   "scripts": {
-    "precommit": "lint-staged --quiet",
-    "test": "echo \"Error: run tests from root\" && exit 1",
     "compile": "rollup -c",
     "compile:watch": "rollup -c -w",
-    "buyout:develop": "yarn run compile:watch",
-    "os:develop": "yarn run compile:watch",
-    "all:develop": "yarn run compile:watch"
+    "precommit": "lint-staged --quiet",
+    "prepare": "is-ci || husky install"
   },
   "dependencies": {
     "@github/clipboard-copy-element": "^1.1.2",
@@ -32,9 +29,18 @@
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
+    "@babel/eslint-parser": "^7.17.0",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-node-resolve": "^13.2.1",
+    "eslint": "^8.13.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "husky": "^7.0.4",
+    "is-ci": "^3.0.1",
+    "lint-staged": "^12.3.7",
     "rollup": "^2.70.2",
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^8.0.0"

@@ -18,6 +18,8 @@ Instructions on testing changes to this shared package _within another full Rail
     You should see output including:
     > success Using linked package for "@teamshares/ui".
 
+3. Finally (not positive this is necessary) rerun `yarn install` _in both directories_ to make sure all necessary dependencies are installed and linked properly.
+
 That's it! You're all configured.
 
 ## _Doing_ Local Development
