@@ -1331,4 +1331,47 @@ clipboard-copy {
   &.space-between {
     justify-content: space-between;
   }
+
+}
+
+.button-view-component {
+  @apply rounded-full font-semibold border;
+
+  &.small {
+    @apply px-3 py-1 ts-body-3;
+  }
+
+  &.default-size {
+    @apply px-6 py-2 ts-body-2;
+  }
+
+  &.large {
+    @apply px-8 py-3 ts-body-2;
+  }
+
+  &:focus-visible {
+    @apply outline-none ring-4 ring-offset-0 ring-blue-500 ring-opacity-50;
+  }
+
+
+  &.basic {
+    @apply ts-text-default bg-gray-100 border-gray-300 hover:bg-gray-200 active:bg-gray-300;
+    
+  }
+
+  &.outlined {
+    @apply ts-text-default bg-transparent border-gray-400 hover:bg-gray-200 active:bg-gray-300;
+  }
+
+  &.primary {
+    @apply ts-text-light bg-blue-600 border-blue-600 hover:bg-blue-700 active:bg-blue-800;
+  }
+
+  &.warning {
+    @apply ts-text-light bg-yellow-500 border-yellow-500 hover:bg-yellow-600;
+  }
+
+  &.destructive {
+    @apply ts-text-light bg-red-700 ts-body-3 border-red-700 hover:bg-red-800 active:bg-red-900;
+  }
 }
