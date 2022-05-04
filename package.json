@@ -41,7 +41,7 @@
     "husky": "^7.0.4",
     "is-ci": "^3.0.1",
     "lint-staged": "^12.3.7",
-    "rollup": "^2.70.2",
+    "rollup": "^2.71.1",
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^8.0.0"
   }
