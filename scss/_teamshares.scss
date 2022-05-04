@@ -425,191 +425,76 @@ ul a {
 // TODO: Refactor all ts-button-primary to ts-button primary and remove from this styling
 button,
 .ts-button {
-  appearance: none;
-  border: 0;
-  border-radius: 0.375rem;
-  cursor: pointer;
-  display: inline-block;
-  font-family: theme('fontFamily.sans');
-  font-size: 0.8125rem;
-  font-weight: $font-weight-medium;
-  letter-spacing: -0.01rem;
-  line-height: 2rem;
-  min-width: 5rem;
-  padding: 0.15rem 1rem;
-  text-align: center;
-
-  // We need to use custom styling when we use sizing (sm, md etc.) for links. If we leave this in ts-button it messes up existing button styles.
-  &.sized-link {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    padding: 0 !important;
-  }
-
-  &.blue {
-    @apply bg-blue-700 text-white hover:text-white;
-  }
-
-  &.xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
-    min-width: 0;
-    padding: 0;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  &.sm {
+  :not(.button-view-component) {
+    appearance: none;
+    border: 0;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    display: inline-block;
+    font-family: theme('fontFamily.sans');
     font-size: 0.8125rem;
-    line-height: 1.9375rem;
-    padding: 0 0.5rem;
-  }
-
-  &.md {
-    font-size: 0.8125rem;
-    line-height: 1.9375rem;
+    font-weight: $font-weight-medium;
+    letter-spacing: -0.01rem;
+    line-height: 2rem;
+    min-width: 5rem;
     padding: 0.15rem 1rem;
-  }
-
-  &.lg {
-    font-size: 0.875rem;
-    line-height: 1.9375rem;
-    min-width: 10rem;
-    padding: 0.15rem 2rem;
     text-align: center;
-  }
 
-  &.lg.icon {
-    padding-left: 2rem;
-
-    svg {
-      height: 1rem;
-    }
-  }
-
-  &.primary {
-    background-color: $gray-900;
-    color: $white;
-    transition: background-color 500ms;
-
-    svg {
-      fill: $white;
+    // We need to use custom styling when we use sizing (sm, md etc.) for links. If we leave this in ts-button it messes up existing button styles.
+    &.sized-link {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      padding: 0 !important;
     }
 
-    &:hover,
-    &:active {
-      background-color: $gray-800;
+    &.blue {
+      @apply bg-blue-700 text-white hover:text-white;
     }
 
-    &:disabled {
-      background-color: $gray-300;
-      color: $gray-500;
+    &.xs {
+      font-size: 0.75rem;
+      line-height: 1rem;
+      min-width: 0;
+      padding: 0;
 
-      &:hover,
-      &:active {
-        background-color: $gray-300;
-        color: $gray-500;
+      &:hover {
+        text-decoration: underline;
       }
     }
 
-    &.success {
-      background-color: $green-600;
-      color: $white;
-
-      &:hover,
-      &:active {
-        background-color: $green-400;
-        color: $white;
-      }
+    &.sm {
+      font-size: 0.8125rem;
+      line-height: 1.9375rem;
+      padding: 0 0.5rem;
     }
 
-    &.error {
-      background-color: $red-700;
-      color: $white;
-
-      &:hover,
-      &:active {
-        background-color: $red-500;
-        color: $white;
-      }
-    }
-  }
-
-  &.secondary {
-    background: transparent;
-    border: 1px solid $gray-800;
-    color: $gray-900;
-
-    svg {
-      fill: $gray-900;
+    &.md {
+      font-size: 0.8125rem;
+      line-height: 1.9375rem;
+      padding: 0.15rem 1rem;
     }
 
-    &:hover,
-    &:active {
-      border-color: $gray-700;
-      color: $gray-700;
+    &.lg {
+      font-size: 0.875rem;
+      line-height: 1.9375rem;
+      min-width: 10rem;
+      padding: 0.15rem 2rem;
+      text-align: center;
+    }
+
+    &.lg.icon {
+      padding-left: 2rem;
 
       svg {
-        fill: $gray-700;
+        height: 1rem;
       }
     }
 
-    &:disabled {
-      background-color: $gray-300;
-      border-style: none;
-      color: $gray-500;
-
-      &:hover,
-      &:active {
-        background-color: $gray-300;
-        color: $gray-500;
-      }
-    }
-
-    &.success {
-      border-color: $green-600;
-      color: $green-600;
-
-      svg {
-        fill: $green-600;
-      }
-
-      &:hover,
-      &:active {
-        border-color: $green-400;
-        color: $green-400;
-
-        svg {
-          fill: $green-400;
-        }
-      }
-    }
-
-    &.error {
-      border-color: $red-700;
-      color: $red-700;
-
-      svg {
-        fill: $red-700;
-      }
-
-      &:hover,
-      &:active {
-        border-color: $red-500;
-        color: $red-500;
-
-        svg {
-          fill: $red-500;
-        }
-      }
-    }
-
-    &.dark {
-      border-color: $white;
+    &.primary {
+      background-color: $gray-900;
       color: $white;
+      transition: background-color 500ms;
 
       svg {
         fill: $white;
@@ -617,100 +502,217 @@ button,
 
       &:hover,
       &:active {
+        background-color: $gray-800;
+      }
+
+      &:disabled {
+        background-color: $gray-300;
+        color: $gray-500;
+
+        &:hover,
+        &:active {
+          background-color: $gray-300;
+          color: $gray-500;
+        }
+      }
+
+      &.success {
+        background-color: $green-600;
+        color: $white;
+
+        &:hover,
+        &:active {
+          background-color: $green-400;
+          color: $white;
+        }
+      }
+
+      &.error {
+        background-color: $red-700;
+        color: $white;
+
+        &:hover,
+        &:active {
+          background-color: $red-500;
+          color: $white;
+        }
+      }
+    }
+
+    &.secondary {
+      background: transparent;
+      border: 1px solid $gray-800;
+      color: $gray-900;
+
+      svg {
+        fill: $gray-900;
+      }
+
+      &:hover,
+      &:active {
+        border-color: $gray-700;
+        color: $gray-700;
+
+        svg {
+          fill: $gray-700;
+        }
+      }
+
+      &:disabled {
+        background-color: $gray-300;
+        border-style: none;
+        color: $gray-500;
+
+        &:hover,
+        &:active {
+          background-color: $gray-300;
+          color: $gray-500;
+        }
+      }
+
+      &.success {
+        border-color: $green-600;
+        color: $green-600;
+
+        svg {
+          fill: $green-600;
+        }
+
+        &:hover,
+        &:active {
+          border-color: $green-400;
+          color: $green-400;
+
+          svg {
+            fill: $green-400;
+          }
+        }
+      }
+
+      &.error {
+        border-color: $red-700;
+        color: $red-700;
+
+        svg {
+          fill: $red-700;
+        }
+
+        &:hover,
+        &:active {
+          border-color: $red-500;
+          color: $red-500;
+
+          svg {
+            fill: $red-500;
+          }
+        }
+      }
+
+      &.dark {
         border-color: $white;
         color: $white;
 
         svg {
           fill: $white;
         }
+
+        &:hover,
+        &:active {
+          border-color: $white;
+          color: $white;
+
+          svg {
+            fill: $white;
+          }
+        }
       }
     }
-  }
 
-  &.white {
-    background-color: $white;
-    color: $gray-900;
-
-    svg {
-      fill: $gray-900;
-    }
-
-    &:hover,
-    &:active {
-      color: $gray-700;
+    &.white {
+      background-color: $white;
+      color: $gray-900;
 
       svg {
-        fill: $gray-700;
+        fill: $gray-900;
       }
-    }
-
-    &:disabled {
-      background-color: $gray-300;
-      color: $gray-500;
 
       &:hover,
       &:active {
+        color: $gray-700;
+
+        svg {
+          fill: $gray-700;
+        }
+      }
+
+      &:disabled {
         background-color: $gray-300;
         color: $gray-500;
-      }
-    }
 
-    &.success {
-      color: $green-600;
-
-      svg {
-        fill: $green-600;
+        &:hover,
+        &:active {
+          background-color: $gray-300;
+          color: $gray-500;
+        }
       }
 
-      &:hover,
-      &:active {
-        color: $green-400;
+      &.success {
+        color: $green-600;
 
         svg {
-          fill: $green-400;
+          fill: $green-600;
+        }
+
+        &:hover,
+        &:active {
+          color: $green-400;
+
+          svg {
+            fill: $green-400;
+          }
+        }
+      }
+
+      &.error {
+        color: $red-700;
+
+        svg {
+          fill: $red-700;
+        }
+
+        &:hover,
+        &:active {
+          color: $red-500;
+
+          svg {
+            fill: $red-500;
+          }
         }
       }
     }
 
-    &.error {
-      color: $red-700;
+    &.icon {
+      text-align: left;
 
       svg {
-        fill: $red-700;
-      }
-
-      &:hover,
-      &:active {
-        color: $red-500;
-
-        svg {
-          fill: $red-500;
-        }
+        display: inline-block;
+        height: 1rem;
+        padding-right: 0.375rem;
+        vertical-align: text-top;
       }
     }
-  }
 
-  &.icon {
-    text-align: left;
+    &.google {
+      background-color: #1a73e8;
+      font-size: 14px;
+      line-height: 36px;
+      padding: 0 24px;
+      @apply mt-2 text-white cursor-pointer flex font-medium inline-flex items-center leading-5 px-4 py-2 rounded-md text-center text-sm transition duration-150 ease-in-out;
 
-    svg {
-      display: inline-block;
-      height: 1rem;
-      padding-right: 0.375rem;
-      vertical-align: text-top;
-    }
-  }
-
-  &.google {
-    background-color: #1a73e8;
-    font-size: 14px;
-    line-height: 36px;
-    padding: 0 24px;
-    @apply mt-2 text-white cursor-pointer flex font-medium inline-flex items-center leading-5 px-4 py-2 rounded-md text-center text-sm transition duration-150 ease-in-out;
-
-    &:hover {
-      box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.5),
-        0 1px 3px 1px rgba(60, 64, 67, 0.3);
+      &:hover {
+        box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.5),
+          0 1px 3px 1px rgba(60, 64, 67, 0.3);
+      }
     }
   }
 }
@@ -1368,7 +1370,11 @@ clipboard-copy {
   }
 
   &.warning {
-    @apply ts-text-light bg-yellow-500 border-yellow-500 hover:bg-yellow-600;
+    @apply ts-text-light bg-yellow-500 border-yellow-500;
+
+    &:hover {
+      filter: brightness(95%);
+    }
   }
 
   &.destructive {
