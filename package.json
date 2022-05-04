@@ -42,7 +42,7 @@
     "is-ci": "^3.0.1",
     "lint-staged": "^12.4.1",
     "rollup": "^2.71.1",
-    "stylelint": "^13.13.1",
-    "stylelint-config-sass-guidelines": "^8.0.0"
+    "stylelint": "^14.8.2",
+    "stylelint-config-sass-guidelines": "^9.0.0"
   }
 }
