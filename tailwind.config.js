@@ -130,8 +130,7 @@ module.exports = {
       fill: ["hover", "focus"],
       padding: ["first", "last"],
       textColor: ["active"],
-      visibility: ["group-hover", "hover"],
-      brightness: ["active", "hover"]
+      visibility: ["group-hover", "hover"]
     }
   },
   plugins: [
