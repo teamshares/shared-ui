@@ -24,11 +24,11 @@
     "@tailwindcss/typography": "^0.4.1",
     "@webcomponents/custom-elements": "^1.5.0",
     "inputmask": "^5.0.7",
-    "material-icons": "^1.10.9",
+    "material-icons": "^1.10.10",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.9",
+    "@babel/core": "^7.17.10",
     "@babel/eslint-parser": "^7.17.0",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@rollup/plugin-babel": "^5.3.1",
