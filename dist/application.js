@@ -342,7 +342,7 @@
     Controller.values = {};
 
     class input_clipboard_controller extends Controller {
-      copy(_event) {
+      copy(event) {
         const clipboardCopyEl = this.element;
         clipboardCopyEl.classList.add("clicked");
         setTimeout(() => {
