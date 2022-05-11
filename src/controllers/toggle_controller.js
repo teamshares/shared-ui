@@ -34,12 +34,12 @@ export default class extends Controller {
   }
 
   toggleExternalTargets () {
-    for (let i=0; i < this.externalTargets.length; ++i) {
+    for (let i = 0; i < this.externalTargets.length; ++i) {
       this.toggleElementClassList(this.externalTargets[i]);
     }
   };
 
-  toggleElementClassList(targetElement) {
+  toggleElementClassList (targetElement) {
     targetElement.classList.toggle(this.classToToggle);
   }
 }

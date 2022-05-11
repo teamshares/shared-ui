@@ -1,8 +1,7 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  copy (event) {
-
+  copy (_event) {
     const clipboardCopyEl = this.element;
     clipboardCopyEl.classList.add("clicked");
 
