@@ -430,7 +430,7 @@ ul a {
 // TODO: Refactor all ts-button-primary to ts-button primary and remove from this styling
 button,
 .ts-button {
-  :not(.button-view-component, .button-icon, svg) {
+  :not(.button-view-component, .button-icon, .icon-button-view-component) {
     appearance: none;
     border: 0;
     border-radius: 0.375rem;
@@ -1341,6 +1341,12 @@ clipboard-copy {
 
 }
 
+a.button-view-component,
+a.icon-button-view-component {
+  display: block;
+  width: max-content;
+}
+
 .button-view-component {
   @apply rounded-full border;
 
@@ -1390,10 +1396,13 @@ clipboard-copy {
   }
 
   > .button-icon {
+    display: flex;
+
     svg {
-      display: inline-block;
+      display: inline-flex;
       height: 100%;
       margin-right: 8px;
+      min-width: auto;
       padding: 0;
       vertical-align: text-bottom;
     }
@@ -1413,12 +1422,13 @@ clipboard-copy {
   }
 
   > .button-icon {
-    a {
-      white-space: nowrap;
-    }
+    display: flex;
 
     svg {
+      display: inline-flex;
       height: 100%;
+      min-width: auto;
+      padding: 0;
       width: 100%;
     }
   }
