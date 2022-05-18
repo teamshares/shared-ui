@@ -29,9 +29,9 @@
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.10",
+    "@babel/core": "^7.17.12",
     "@babel/eslint-parser": "^7.17.0",
-    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-proposal-class-properties": "^7.17.12",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "eslint": "^8.15.0",
@@ -42,7 +42,7 @@
     "husky": "^8.0.1",
     "is-ci": "^3.0.1",
     "lint-staged": "^12.4.1",
-    "rollup": "^2.72.1",
+    "rollup": "^2.73.0",
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^8.0.0"
   }
