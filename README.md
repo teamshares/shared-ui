@@ -2,6 +2,12 @@
 
 JavaScript package to share frontend UI components, styles, and configuration.
 
+## Editing javascript
+
+Note that as currently configured, downstream consumers pull in JS code from `dist/`, not from `src/`, so you need to make sure you run `yarn compile` after making any edits under `src/`.
+
+To _help_ make sure that isn't forgotten, there's a pre-commit hook that detects JS changes under `src/` and runs compilation automatically... unfortunately (for now at least) **you still have to manually add the  `dist/` changes to your commit**.
+
 ## Local Development _Setup_
 
 Instructions on testing changes to this shared package _within another full Rails app in development_ (e.g. to have OS read your _local_ TeamsharesUI, without having to deploy all changes first). If you'd rather see it visually, I've walked through the steps [in this Loom video](https://www.loom.com/share/856ecb06ed1945eab4d19cf7a6ec12b8).
