@@ -204,8 +204,8 @@ ul a {
 
 // Form elements
 // TODO: Refactor all ts-button-primary to ts-button primary and remove from this styling
-button:not(.button-view-component, .button-icon, .icon-button-view-component),
-.ts-button:not(.button-view-component, .button-icon, .icon-button-view-component) {
+button:not(.button-view-component, .button-icon, .icon-button-view-component, .nav-button),
+.ts-button:not(.button-view-component, .button-icon, .icon-button-view-component, .nav-button) {
   appearance: none;
   border: 0;
   border-radius: 0.375rem;
