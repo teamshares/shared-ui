@@ -3,8 +3,7 @@ import { Controller } from "@hotwired/stimulus";
 export default class extends Controller {
   static targets = ["switchable", "clickable"];
 
-  // for now, hard-coded to work with /for-leaders page.
-  // future PR will remove hard-coded classes and add value for customizable active and inactive classes.
+  // TODO: classes are hardcoded to work with /for-leaders page - switch to using Values to customize active/inactive classes
 
   connect () {
     this.element[this.identifier] = this;
