@@ -2190,10 +2190,10 @@ map-obj@^4.0.0:
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-4.3.0.tgz#9304f906e93faae70880da102a9f1df0ea8bb05a"
   integrity sha512-hdN1wVrZbb29eBGiGjJbeP8JbKjq1urkHJ/LIP/NY48MZ1QVXUsQBV1G1zvYFHn1XE06cwjBsOI2K3Ulnj1YXQ==
 
-material-icons@^1.10.11:
-  version "1.10.11"
-  resolved "https://registry.yarnpkg.com/material-icons/-/material-icons-1.10.11.tgz#43e5d7777ec7f6ee583646370f506ee49b478611"
-  integrity sha512-A0LqelW1j8Ik/8Cf3nKaUyabFrUXaGOpK2CyJvwWuobCDHtuW5hbM4mzyu3C5e4QfC0l8CjFBaP1h5sm91sRjw==
+material-icons@^1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/material-icons/-/material-icons-1.11.0.tgz#d29f20b25cbd01ac5acc0d7ccbdb40c279e2146f"
+  integrity sha512-t2PNjdF36nFzt82domIwhBm3JCfuEo2EMTiJzb5K1cUR3Sg1aEtcZrkecLHtB26eohtgqvndewL8Zy4cu9DIfg==
 
 mathml-tag-names@^2.1.3:
   version "2.1.3"
