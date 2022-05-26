@@ -342,7 +342,7 @@
     Controller.values = {};
 
     class input_clipboard_controller extends Controller {
-      copy(event) {
+      copy(_event) {
         const clipboardCopyEl = this.element;
         clipboardCopyEl.classList.add("clicked");
         setTimeout(() => {
@@ -421,8 +421,7 @@
     _defineProperty(_class$1, "classes", ["toggle"]);
 
     class _class extends Controller {
-      // for now, hard-coded to work with /for-leaders page.
-      // future PR will remove hard-coded classes and add value for customizable active and inactive classes.
+      // TODO: hardcoded to work with /for-leaders page - switch to using Values to customize active/inactive classes
       connect() {
         this.element[this.identifier] = this;
       }
