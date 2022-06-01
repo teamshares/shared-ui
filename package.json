@@ -13,8 +13,7 @@
   "scripts": {
     "compile": "rollup -c",
     "compile:watch": "rollup -c -w",
-    "precommit": "lint-staged --quiet",
-    "prepare": "is-ci || husky install"
+    "precommit": "lint-staged --quiet"
   },
   "dependencies": {
     "@github/clipboard-copy-element": "^1.1.2",
@@ -40,7 +39,6 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.0",
     "husky": "^8.0.1",
-    "is-ci": "^3.0.1",
     "lint-staged": "^12.4.2",
     "rollup": "^2.73.0",
     "stylelint": "^13.13.1",

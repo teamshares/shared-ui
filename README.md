@@ -2,6 +2,10 @@
 
 JavaScript package to share frontend UI components, styles, and configuration.
 
+## Setup
+
+When you first check this repo out, run `yarn` to install dependencies, then make sure you're run once: `yarn husky install`.  This _was_ a `prepare` script to be run automatically, but [the presence of that script name in package.json that causes weird broken-cache issues](https://github.com/yarnpkg/yarn/issues/7212#issuecomment-493720324) with downstream consumers who pull the library in via git (i.e. everyone).
+
 ## Editing javascript
 
 Note that as currently configured, downstream consumers pull in JS code from `dist/`, not from `src/`, so you need to make sure you run `yarn compile` after making any edits under `src/`.
