@@ -13,8 +13,7 @@
   "scripts": {
     "compile": "rollup -c",
     "compile:watch": "rollup -c -w",
-    "precommit": "lint-staged --quiet",
-    "prepare": "is-ci || husky install"
+    "precommit": "lint-staged --quiet"
   },
   "dependencies": {
     "@github/clipboard-copy-element": "^1.1.2",
