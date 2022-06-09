@@ -1134,6 +1134,10 @@ a.icon-button-view-component {
     @apply px-8 py-3 ts-body-2;
   }
 
+  &.x-large {
+    @apply px-12 py-5 ts-body-1;
+  }
+
   &.default {
     @apply bg-gray-100 font-semibold ts-text-default border-gray-300 hover:bg-gray-200 active:bg-gray-300;
   }
