@@ -1123,15 +1123,27 @@ a.icon-button-view-component {
   @apply rounded-full border;
 
   &.small {
-    @apply px-3 py-1 ts-body-3;
+    @apply px-3 ts-body-3;
+    padding-bottom: 5px;
+    padding-top: 5px;
   }
 
   &.medium {
-    @apply px-6 py-2 ts-body-2;
+    @apply px-6 ts-body-2;
+    padding-bottom: 9px;
+    padding-top: 9px;
   }
 
   &.large {
-    @apply px-8 py-3 ts-body-2;
+    @apply px-8 ts-body-2;
+    padding-bottom: 13px;
+    padding-top: 13px;
+  }
+
+  &.x-large {
+    @apply px-12 ts-body-1;
+    padding-bottom: 19px;
+    padding-top: 19px;
   }
 
   &.default {
