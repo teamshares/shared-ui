@@ -96,14 +96,32 @@ module.exports = {
         semibold: 600,
         bold: 700
       },
+      // TODO: delete height and width configs after updating Tailwind > 2.1
       height: {
         "680px": "680px",
         "38": "38rem"
       },
+      width: {
+        "300": "300px",
+        "350": "350px",
+        "400": "400px",
+        "450": "450px",
+        "500": "500px",
+        "550": "550px",
+        "600": "600px",
+        "650": "650px",
+        "700": "700px",
+        "750": "750px",
+        "800": "800px",
+        "850": "850px",
+        "900": "900px",
+        "950": "950px",
+        "1000": "1000",
+       },
       margin: {
         "54px": "54px"
       },
-       spacing: {
+      spacing: {
         15: "3.75rem"
       },
       // Not in Buyout
