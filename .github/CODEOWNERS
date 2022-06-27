@@ -1,1 +1,5 @@
 * @kdonovan @lizziekoshelev @rkcrisafi @ebabian
+
+# Only ping Kali for dependabots
+package.json @kdonovan
+yarn.lock @kdonovan
