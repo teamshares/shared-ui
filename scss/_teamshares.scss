@@ -716,10 +716,11 @@ ul a {
 // Dashboard components
 
 .ts-card {
-  border: 1px solid $gray-300;
-  border-radius: 0.5rem;
-  min-width: 4rem;
-  overflow: hidden;
+  @apply rounded-lg;
+
+  box-shadow:
+    0 0 4px 1px rgba(0, 0, 0, 0.04),
+    0 0 0 1px rgba(0, 0, 0, 0.06);
 }
 
 clipboard-copy {
