@@ -1,9 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  extends: [ "config:base" ],
+  extends: [ "config:base", "github>teamshares/renovate-config:default.json5" ],
   prConcurrentLimit: 3,
   labels: ["dependencies"],
-  lockFileMaintenance: { "enabled": true },
+  lockFileMaintenance: { "enabled": false },
   prBodyDefinitions: {
     Package: "{{{depNameLinked}}}",
   },
