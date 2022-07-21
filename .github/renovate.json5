@@ -1,0 +1,11 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  extends: ["github>teamshares/renovate-config:default.json5"],
+  ignoreDeps: [],
+  packageRules: [
+    { // Skipping until we're all on tailwind 3+
+      matchPackagePrefixes: ["@tailwindcss"],
+      enabled: false
+    },
+  ]
+}

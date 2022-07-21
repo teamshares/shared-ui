@@ -1,0 +1,10 @@
+#!/bin/bash
+
+printf "\n\nRunning refresh script\n\n"
+
+printf "\nPulling latest code change from Github\n"
+git pull origin main
+
+yarn install
+
+printf "\nUpdated!\n"
