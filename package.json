@@ -24,7 +24,7 @@
     "@tailwindcss/typography": "^0.4.1",
     "@webcomponents/custom-elements": "^1.5.0",
     "inputmask": "^5.0.7",
-    "material-icons": "^1.11.5",
+    "material-icons": "^1.11.6",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "devDependencies": {
@@ -40,7 +40,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
-    "rollup": "^2.76.0",
+    "rollup": "^2.77.0",
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^8.0.0"
   }
