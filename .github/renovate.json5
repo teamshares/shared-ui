@@ -1,12 +1,56 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  extends: ["github>teamshares/renovate-config:default.json5"],
-  lockFileMaintenance: { "enabled": false },
+  extends: [ "config:base" ],
+  prConcurrentLimit: 3,
+  labels: ["dependencies"],
+  lockFileMaintenance: { "enabled": true },
+  prBodyDefinitions: {
+    Package: "{{{depNameLinked}}}",
+  },
+  timezone: "America/New_York",
+  schedule: ["after 9pm and before 5am every weekday", "every weekend"],
   ignoreDeps: [],
   packageRules: [
-    { // Skipping until we're all on tailwind 3+
-      matchPackagePrefixes: ["@tailwindcss"],
-      enabled: false
+    { matchManagers: ["bundler"], addLabels: ["ruby"] },
+    { matchManagers: ["npm"], addLabels: ["js"] },
+    { matchManagers: ["github-actions"], addLabels: ["github"] },
+
+    // --- Grouping ---
+    {
+      matchPackageNames: ["flipper", "flipper-active_record", "flipper-ui"],
+      groupName: "flipper",
     },
+    {
+      matchManagers: ["bundler"],
+      packagePatterns: ["^aws-"],
+      groupName: "AWS SDK"
+    },
+
+    // --- Auto-Merges ---
+    { // Automatically merge our linters if CI passes
+      matchDepTypes: ["devDependencies"],
+      matchPackagePatterns: ["eslint", "prettier", "rubocop", "stylelint"],
+      groupName: "linters",
+      automerge: true
+    },
+    { // Automatically group and merge patch-level updates (for packages w/ version larger than 0) when CI passes
+      matchUpdateTypes: ["patch"],
+      matchCurrentVersion: "!/^0/",
+      groupName: "all patch-level dependencies",
+      groupSlug: "all-patches",
+      automerge: true
+    }
   ]
 }
+// {
+//   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+//   extends: ["github>teamshares/renovate-config:default.json5"],
+//   lockFileMaintenance: { "enabled": false },
+//   ignoreDeps: [],
+//   packageRules: [
+//     { // Skipping until we're all on tailwind 3+
+//       matchPackagePrefixes: ["@tailwindcss"],
+//       enabled: false
+//     },
+//   ]
+// }
