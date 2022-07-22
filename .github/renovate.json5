@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  extends: ["github>teamshares/renovate-config:default.json5"],
+  extends: ["local>teamshares/renovate-config:default.json5"],
   lockFileMaintenance: { "enabled": false },
   ignoreDeps: [],
   packageRules: [
