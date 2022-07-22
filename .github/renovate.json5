@@ -4,9 +4,6 @@
   lockFileMaintenance: { "enabled": false },
   ignoreDeps: [],
   packageRules: [
-    { // Skipping until we're all on tailwind 3+
-      matchPackagePrefixes: ["@tailwindcss"],
-      enabled: false
-    },
+    { matchPackagePrefixes: ["@tailwindcss"], enabled: false }, // Skipping until we're all on tailwind 3+
   ]
 }
